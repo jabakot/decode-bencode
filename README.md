@@ -2,6 +2,8 @@
 
 A Go lang library for encoding and decoding data in bencode format.
 
+![Beencode](logo.png "bee encode")
+
 ## Get the pkg
 
 ```bash
@@ -21,7 +23,7 @@ import (
 ```go
 input := "d6:answeri42e5:hello5:world2:hi4:mark4:jojo12:ゴゴゴゴ12:wrong-answeri-42ee"
 
-output, err := decodebencode.TestDecodeBencode(input)
+output, err := decodebencode.DecodeBencode(input)
 
 if (err != nil) {
     fmt.Println(err)
@@ -39,7 +41,7 @@ bencode := decodebencode.EncodeBencodeInteger(42)
 // bencode == "i42e"
 ```
 
-### Encode str to bencode (str)
+## Encode str to bencode (str)
 
 
 ```go
@@ -77,4 +79,3 @@ bencode := decodebencode.EncodeBencodeDict(listWithIntAndString)
 ```
 
 
-![Beencode](logo.png "bee encode")
